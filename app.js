@@ -32,5 +32,5 @@ const games = [
 
 games.forEach((games)=> console.log(games.title));
 
-const newgames = games.filter(((game) => game.release > 2018))
-console.log(newgames)
+const newgames = games.filter(((game) => game.release > 2018));
+newgames.forEach((games) => console.log(games.title));
