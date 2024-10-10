@@ -1,4 +1,4 @@
-const DOMSelectors = {
+/* const DOMSelectors = {
     header: document.querySelector("h1"),
     items:document.querySelector("li"),
     cardHeader: document.querySelector(".card-header"),
@@ -27,4 +27,16 @@ const buttons = document.querySelectorAll("button")
 buttons.forEach((btn)=>
     btn.addEventListener("click", function(event){;
         console.log(evnet.target.textContent)
-    }));
+    })); */
+
+
+
+const DOMSelectors={
+    button: document.getElementById("btn"),
+    text: document.querySelector("#text"),
+    empty:document.querySelector(".nothing"),
+    point: document.querySelector(".point"),
+    pointTwo: document.getElementById("pointTwo")
+};
+
+console.log(DOMSelectors.pointTwo);
