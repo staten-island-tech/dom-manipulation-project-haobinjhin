@@ -36,7 +36,13 @@ const DOMSelectors={
     text: document.querySelector("#text"),
     empty:document.querySelector(".nothing"),
     point: document.querySelector(".point"),
-    pointTwo: document.getElementById("pointTwo")
+    pointTwo: document.getElementById("pointTwo"),
+    box: document.getElementById("container"),
 };
 
-console.log(DOMSelectors.pointTwo);
+function backgroundAndText(background, text){
+    background.style.backgroundColor = "red";
+    text.innerHTML = "This is now a big red box";
+}
+
+backgroundAndText(DOMSelectors.box, DOMSelectors.text)

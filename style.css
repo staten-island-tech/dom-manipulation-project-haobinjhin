@@ -1,10 +1,6 @@
 html,
 body,
-
-.container{
-    background-color: beige;
-}
-
-.text{
-    
+.container {
+    min-width: 100%;
+    min-height: 100%;
 }
