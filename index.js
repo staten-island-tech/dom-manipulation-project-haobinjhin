@@ -34,15 +34,28 @@ buttons.forEach((btn)=>
 const DOMSelectors={
     button: document.getElementById("btn"),
     text: document.querySelector("#text"),
-    empty:document.querySelector(".nothing"),
-    point: document.querySelector(".point"),
+    points: document.querySelectorAll(".point"),
     pointTwo: document.getElementById("pointTwo"),
-    box: document.getElementById("container"),
+    box: document.getElementById("beigebox"),
 };
 
 function backgroundAndText(background, text){
     background.style.backgroundColor = "red";
-    text.innerHTML = "This is now a big red box";
+    text.textContent = "This is now a big red box";
+    text.style.fontSize = "40px" ;
+}
+DOMSelectors.button.addEventListener("click", function(){
+    backgroundAndText(DOMSelectors.box, DOMSelectors.text);
+})
+
+function changeLi(){
+    let pointIndex = 1;
+    DOMSelectors.points.forEach((point) => {
+        point.addEventListener("click", function(){
+            point.textContent = `Hello I am point ${pointIndex}`;
+            pointIndex++;
+        })
+    })
 }
 
-backgroundAndText(DOMSelectors.box, DOMSelectors.text)
+changeLi()
