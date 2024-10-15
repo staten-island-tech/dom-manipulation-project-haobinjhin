@@ -34,7 +34,7 @@ buttons.forEach((btn)=>
 const DOMSelectors={
     button: document.getElementById("btn"),
     box: document.getElementById("beigebox"),
-    input: document.querySelector("#input"),
+    input: document.querySelector("#input-word"),
 };
 
 /* function backgroundAndText(background, text){
