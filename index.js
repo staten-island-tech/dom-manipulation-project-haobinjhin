@@ -33,13 +33,11 @@ buttons.forEach((btn)=>
 
 const DOMSelectors={
     button: document.getElementById("btn"),
-    text: document.querySelector("#text"),
-    points: document.querySelectorAll(".point"),
-    pointTwo: document.getElementById("pointTwo"),
     box: document.getElementById("beigebox"),
+    input: document.querySelector("#input"),
 };
 
-function backgroundAndText(background, text){
+/* function backgroundAndText(background, text){
     background.style.backgroundColor = "red";
     text.textContent = "This is now a big red box";
     text.style.fontSize = "40px" ;
@@ -58,4 +56,13 @@ function changeLi(){
     })
 }
 
-changeLi()
+changeLi() */
+
+
+/* const simga = "sigma";
+DOMSelectors.box.insertAdjacentHTML("afterend", `<h1>I am so ${simga}</h1>`) */
+
+DOMSelectors.button.addEventListener("click", function(){
+    let input = DOMSelectors.input.value;
+    DOMSelectors.box.insertAdjacentHTML("beforebegin", `<p>${input}</p>`)
+})
