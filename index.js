@@ -32,9 +32,10 @@ buttons.forEach((btn)=>
 
 
 const DOMSelectors={
-    button: document.getElementById("btn"),
+    create: document.getElementById("crtebtn"),
     box: document.getElementById("beigebox"),
     input: document.querySelector("#input-word"),
+    remove: document.getElementById("rmvebtn")
 };
 
 /* function backgroundAndText(background, text){
@@ -45,7 +46,7 @@ const DOMSelectors={
 DOMSelectors.button.addEventListener("click", function(){
     backgroundAndText(DOMSelectors.box, DOMSelectors.text);
 })
-
+ 
 function changeLi(){
     let pointIndex = 1;
     DOMSelectors.points.forEach((point) => {
@@ -62,7 +63,21 @@ changeLi() */
 /* const simga = "sigma";
 DOMSelectors.box.insertAdjacentHTML("afterend", `<h1>I am so ${simga}</h1>`) */
 
-DOMSelectors.button.addEventListener("click", function(){
-    let input = DOMSelectors.input.value;
-    DOMSelectors.box.insertAdjacentHTML("beforebegin", `<p>${input}</p>`)
-})
+function createstuff(){DOMSelectors.create.addEventListener("click", function(){
+    let word = DOMSelectors.input.value;
+    DOMSelectors.box.insertAdjacentHTML("beforebegin", `<p>${word}</p>`)
+    DOMSelectors.input.value = null
+    word.setAttribute("id", "stuffcreated")
+})}
+
+createstuff()
+
+function removestuff(){
+DOMSelectors.remove.addEventListener("click", function(){
+DOMSelectors.querySelector("stuffcreated").remove()
+
+
+    
+})}
+
+removestuff()
