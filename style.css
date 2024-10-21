@@ -4,9 +4,16 @@ body {
     padding: 0;
     height: 100%;
     background-color: beige;
+<<<<<<< Updated upstream
+=======
+}
+
+#beigebox {
+>>>>>>> Stashed changes
     text-align: center;
 }
 
+<<<<<<< Updated upstream
 #beigebox {
     display: flex; 
     flex-wrap: wrap; 
@@ -33,3 +40,10 @@ body {
     height: 150px;
     object-fit: cover;
 }
+=======
+.card {
+    width: 10rem;
+    height: 10rem;
+    background-color: white;
+}
+>>>>>>> Stashed changes

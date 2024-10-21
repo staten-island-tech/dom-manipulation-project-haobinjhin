@@ -66,6 +66,7 @@ DOMSelectors.box.insertAdjacentHTML("afterend", `<h1>I am so ${simga}</h1>`) */
     inputpic: document.querySelector("#input-pic"),
 };
 
+<<<<<<< Updated upstream
 function makeandremove(){
     DOMSelectors.create.addEventListener("click", function(){
     let Word = DOMSelectors.inputword.value;
@@ -75,6 +76,23 @@ function makeandremove(){
     pushcard(Word, Pic);
     
     clearinput();
+=======
+function removestuff(){
+    const btns = document.querySelectorAll.remove;
+    btns.forEach(btn => {
+        DOMSelectors.btn.addEventListener("click", function(){
+            this.parentElement.remove();
+        })
+    });
+
+    /* DOMSelectors.btn.addEventListener("click", function(){
+            btn.forEach(button => {
+                button
+            });
+        DOMSelectors.querySelector("stuffcreated").remove() */
+
+};  
+>>>>>>> Stashed changes
 
     remove();
    
