@@ -31,12 +31,7 @@ buttons.forEach((btn)=>
 
 
 
-const DOMSelectors={
-    create: document.getElementById("crtebtn"),
-    box: document.getElementById("beigebox"),
-    input: document.querySelector("#input-word"),
-    remove: document.getElementById("rmvebtn")
-};
+
 
 /* function backgroundAndText(background, text){
     background.style.backgroundColor = "red";
@@ -63,21 +58,52 @@ changeLi() */
 /* const simga = "sigma";
 DOMSelectors.box.insertAdjacentHTML("afterend", `<h1>I am so ${simga}</h1>`) */
 
-function createstuff(){DOMSelectors.create.addEventListener("click", function(){
-    let word = DOMSelectors.input.value;
-    DOMSelectors.box.insertAdjacentHTML("beforebegin", `<p>${word}</p>`)
-    DOMSelectors.input.value = null
-    word.setAttribute("id", "stuffcreated")
-})}
 
-createstuff()
+ const DOMSelectors={
+    create: document.getElementById("makebutton"),
+    box: document.getElementById("beigebox"),
+    inputword: document.querySelector("#input-word"),
+    inputpic: document.querySelector("#input-pic"),
+};
 
-function removestuff(){
-DOMSelectors.remove.addEventListener("click", function(){
-DOMSelectors.querySelector("stuffcreated").remove()
+function makeandremove(){
+    DOMSelectors.create.addEventListener("click", function(){
+    let Word = DOMSelectors.inputword.value;
 
+    let Pic = DOMSelectors.inputpic.value;
 
+    pushcard(Word, Pic);
     
-})}
+    clearinput();
 
-removestuff()
+    remove();
+   
+}); 
+}
+
+function pushcard(word, pic){
+    DOMSelectors.box.insertAdjacentHTML("beforeend", 
+        `<div class = "newDiv"> 
+        <h1>${word}</h1>
+        <img src="${pic}" alt="${word}" class = "image">
+        <br>
+        <button type="button" class = "removebtn">remove</button>
+    </div>`)
+
+}
+
+function clearinput(){
+    DOMSelectors.inputword.value = "";
+
+    DOMSelectors.inputpic.value = "";
+}
+
+function remove(){
+    const newdiv = DOMSelectors.box.lastElementChild;
+    const removebutton = newdiv.querySelector(".removebtn");
+    removebutton.addEventListener("click", function(){
+        newdiv.remove()
+    })
+}
+
+makeandremove()
